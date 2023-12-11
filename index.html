@@ -4,6 +4,57 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Programação Acessível: Aprendendo Python com VSCode para pessoas cegas</title>
+
+        <style>
+            ol {
+              counter-reset: section;
+              list-style-type: none;
+            }
+
+            ol > li {
+              counter-increment: section;
+            }
+
+            ol > li > ol {
+              counter-reset: subsection;
+            }
+
+            ol > li > ol > li {
+              counter-increment: subsection;
+            }
+
+            ol > li > ol > li > ol {
+              counter-reset: subsubsection;
+            }
+
+            ol > li > ol > li > ol > li {
+              counter-increment: subsubsection;
+            }
+
+            ol > li > ol > li > ol > li > ol {
+              counter-reset: subsubsubsection;
+            }
+
+            ol > li > ol > li > ol > li > ol > li {
+              counter-increment: subsubsubsection;
+            }
+
+            ol > li::before {
+              content: counter(section) ". ";
+            }
+
+            ol > li > ol > li::before {
+              content: counter(section) "." counter(subsection) " ";
+            }
+
+            ol > li > ol > li > ol > li::before {
+              content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+            }
+
+            ol > li > ol > li > ol > li > ol > li::before {
+              content: counter(section) "." counter(subsection) "." counter(subsubsection) "." counter(subsubsubsection) " "; /
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -11,6 +62,7 @@
             <p>Autores: Anderson Candido, André Pedrofeza, Gabriel Bonatto, Pedro Henrique.</p>
 
             <nav>
+                <h2>Índice</h2>
                 <ol>
                     <li><a href="#ferramentas-utilizadas">Ferramentas utilizadas nesse tutorial</a></li>
                     <li>
@@ -61,8 +113,9 @@
 
         <main>
             <article>
+                <h1>Aprendendo Python com VSCode para pessoas cegas.</h1>
                 <section>
-                    <h2 id="ferramentas-utilizadas">Ferramentas Utilizadas nesse tutorial</h2>
+                    <h2 id="ferramentas-utilizadas">Ferramentas utilizadas nesse tutorial</h2>
                     <p>Esse tutorial foi testado utilizando as ferramentas abaixo:</p>
                     <ul>
                         <li>Leitor de Tela: NVDA;</li>
@@ -76,12 +129,12 @@
                         Nesse tutorial, vamos apresentar algumas plataformas que são acessíveis e que podem ser utilizadas para aprender Python.
                     </p>
 
-                    <h3 id="traduzir-conteudo">Como traduzir o conteúdos em outros idiomas</h3>
+                    <h3 id="traduzir-conteudo">Como traduzir o conteúdo em outros idiomas</h3>
 
                     <p>
                         A maioria dos tutoriais de programação são feitos em inglês, por isso, é necessário ter conhecimento do idioma ou traduzir a página para o português.
-                        Listamos algumas maneiras de traduzir o conteúdo da página caso seja em inglês. Esse é um passo muito importante, pois caso você não tenha conhecimento do
-                        idioma, não será possível acompanhar o conteúdo aqui descrito e muitos outros.
+                        Listamos algumas maneiras de traduzir o conteúdo da página caso seja em inglês. Esse é um passo muito importante, pois sem o domínio da lingua ou uma
+                        tradução, não será possível acompanhar o conteúdo desse tutorial e de outros da área de computação.
                     </p>
 
                     <h4 id="traduzir-por-pagina">Traduzir por página</h4>
@@ -92,7 +145,7 @@
 
                     <h5 id="sem-conta-google-logada">Sem conta da Google logada</h5>
                     <ol>
-                        <li>Clique com o botão direito do mouse em qualquer ponto da página e pressione a tecla "T", essa ação irá traduzir o conteúdo da página.</li>
+                        <li>Clique com o botão direito do mouse em qualquer local da página e pressione a tecla 'T', essa ação irá traduzir o conteúdo da página.</li>
                         <li>
                             Caso a página não seja traduzida é necessário clicar em algum outro local da página e tentar novamente, pois essa ação não deve selecionar nenhum
                             controle de formulário.
@@ -102,8 +155,8 @@
                     <h5 id="com-conta-google-logada">Com conta da Google logada</h5>
 
                     <ol>
-                        <li>Com o navegador aberto, apertar a tecla ALT para selecionar a opção de "Personalizar o Google Chrome" e pressione "Enter".</li>
-                        <li>Aperta a seta para baixo até encontrar a opção "Traduzir", então pressione "Enter".</li>
+                        <li>Com o navegador aberto, pressione a tecla ALT para selecionar a opção de "Personalizar o Google Chrome" e pressione "Enter".</li>
+                        <li>Pressione a seta para baixo até encontrar a opção "Traduzir", então pressione "Enter".</li>
                         <li>A página então será traduzida para o idioma do sistema operacional.</li>
                     </ol>
 
@@ -116,10 +169,10 @@
                     <p>Para que isso seja possível, siga o passo-a-passo abaixo:</p>
 
                     <ol>
-                        <li>Com o navegador aberto, apertar a tecla ALT para selecionar a opção de "Personalizar o Google Chrome" e pressione "Enter".</li>
-                        <li>Aperta a seta para baixo até encontrar a opção "Definições", então pressione "Enter".</li>
+                        <li>Com o navegador aberto, pressionar a tecla ALT para selecionar a opção de "Personalizar o Google Chrome" e pressione "Enter".</li>
+                        <li>Pressione a seta para baixo até encontrar a opção "Definições", então pressione "Enter".</li>
                         <li>A tela já irá abrir com a barra de pesquisa selecionada, então digite "Tradutor".</li>
-                        <li>Aperte "Tab" até encontrar a opção "Adicionar Idiomas" da opção "Traduza automaticamente estes idiomas", então pressione "Enter".</li>
+                        <li>Pressione "Tab" até encontrar a opção "Adicionar Idiomas" da opção "Traduza automaticamente estes idiomas", então pressione "Enter".</li>
                         <li>
                             Irá abrir um menu onde é possível selecionar todos os idiomas que o Chrome irá traduzir automaticamente o conteúdo. Digite "inglês" e pressione "Tab"
                             até encontrar a opção com checkbox do "Inglês - English", então pressione "Espaço" ou "Enter" para marcar o checkbox.
@@ -145,9 +198,9 @@
                     <p>O tutorial do W3Schools é dividido em capítulos, que começam desde o básico da linguagem, até os conceitos mais avançados.</p>
 
                     <p>
-                        A plataforma possui algumas áreas de “Exemplo” em que é possível visualizar um exemplo em código do que está sendo ensinado no documento. Além disso, nessa
-                        parte de exemplos, possui um botão de “Experimente você mesmo”, para que você possa executar o código no próprio W3Schools, porém essa ação vai abrir uma
-                        nova aba, o que pode dificultar o acompanhamento da tarefa, por isso, a preferência será de executar os códigos no próprio VSCode.
+                        A plataforma possui algumas áreas de 'Exemplo' em que é possível visualizar um exemplo em código do que está sendo ensinado no documento. Além disso, nessa
+                        parte de exemplos, possui um botão de “Experimente você mesmo”, para que você possa executar o código no próprio W3Schools. Essa ação abrirá uma nova aba, o
+                        que pode dificultar o acompanhamento da tarefa, por isso, a preferência será de executar os códigos no próprio VSCode.
                     </p>
 
                     <h3 id="python-org">Python.org</h3>
@@ -170,9 +223,10 @@
 
                     <h3 id="extensoes">Extensões</h3>
                     <p>
-                        Para instalar uma extensão, aperte as teclas “CTRL + SHIFT + X” para abrir a aba de extensões. Nessa aba, digite o nome da extensão que deseja instalar e
-                        aperte “Enter” para buscar a extensão. Após encontrar a extensão desejada, aperte “Enter” para selecionar a extensão e aperte "Tab" consecutivamente até
-                        encontrar o botão de "instalar", então pressione "Enter" para instlar. Após a instalação, a extensão vai aparecer na lista de extensões instaladas.
+                        Para instalar uma extensão, pressione as teclas “CTRL + SHIFT + X” para abrir a aba de extensões. Nessa aba, digite o nome da extensão que deseja instalar e
+                        pressione “Enter” para buscar a extensão. Após encontrar a extensão desejada, pressione “Enter” para selecionar a extensão e pressione "Tab"
+                        consecutivamente até encontrar o botão de "instalar", então pressione "Enter" para instalar. Após a instalação, a extensão vai aparecer na lista de
+                        extensões instaladas.
                     </p>
 
                     <h3 id="extensoes-python">Extensões para programar em Python</h3>
@@ -186,7 +240,7 @@
                     <h3 id="configuracao-acessibilidade">Configurações de acessibilidade.</h3>
                     <p>
                         O VSCode possui algumas configurações de acessibilidade que podem ser ativadas para facilitar o uso do editor. Para acessar as configurações de
-                        acessibilidade, aperte as teclas “CTRL + SHIFT + P” e digite “Preferences: Open Settings (JSON)”. Isso vai abrir um arquivo JSON com as configurações do
+                        acessibilidade, pressione as teclas “CTRL + SHIFT + P” e digite “Preferences: Open Settings (JSON)”. Isso vai abrir um arquivo JSON com as configurações do
                         VSCode. Para ativar as configurações de acessibilidade, adicione as seguintes linhas no arquivo JSON:
                     </p>
 
@@ -206,21 +260,27 @@
 
                     <h3 id="dicas-desenvolvimento">Dicas para auxiliar o desenvolvimento</h3>
                     <p>
-                        Com as extensões instaladas anteriormente, será possível conferir erros diretamente no editor de texto do VSCode, sem a necessidade de abrir o terminal. Abaixo existe uma lista de atalhos e quando devem ser usados, além de outras dicas gerais:
+                        Com as extensões instaladas anteriormente, será possível conferir erros diretamente no editor de texto do VSCode, sem a necessidade de abrir o terminal.
+                        Abaixo existe uma lista de atalhos e quando devem ser usados, além de outras dicas gerais:
                     </p>
 
                     <ul>
-                        <li>Quando o modo de leitor de tela está habilitado no VSCode, um feedback de audio é tocado quando existe um erro na linha selecionada.   Para saber do que se trata o erro, basta pressionar "CTRL + K + I", então a mensagem do erro será lida pelo leitor de tela. Essa mensagem pode ser um pouco extensa dependendo do erro, mas é possível ter uma ideia do que está acontecendo.
+                        <li>
+                            Quando o modo de leitor de tela está habilitado no VSCode, um feedback de audio é tocado quando existe um erro na linha selecionada. Para saber do que
+                            se trata o erro, basta pressionar "CTRL + K + I", então a mensagem do erro será lida pelo leitor de tela. Essa mensagem pode ser um pouco extensa
+                            dependendo do erro, mas é possível ter uma ideia do que está acontecendo.
                         </li>
                         <li>
-                            Se o documento tem muitos erros ou voce deseja navegar entre eles de uma maneira mais fácil, é possível pressionar o atalho "CTRL + SHIFT + M", isso irá abrir o menu de "Problemas" que possue uma lista de todos os erros e avisos de todos os arquivos abertos no VSCode. Para navegar entre os erros, basta pressionar a seta para cima ou para baixo, isso irá selecionar o erro e o leitor de tela irá ler a mensagem do erro. O VSCode também irá te levar automaticamente para o arquivo e linha do erro, sendo possível corrigir o erro diretamente no editor de texto.
+                            Se o documento tem muitos erros ou voce deseja navegar entre eles de uma maneira mais fácil, é possível pressionar o atalho "CTRL + SHIFT + M", isso irá
+                            abrir o menu de "Problemas" que possue uma lista de todos os erros e avisos de todos os arquivos abertos no VSCode. Para navegar entre os erros, basta
+                            pressionar a seta para cima ou para baixo, isso irá selecionar o erro e o leitor de tela irá ler a mensagem do erro. O VSCode também irá te levar
+                            automaticamente para o arquivo e linha do erro, sendo possível corrigir o erro diretamente no editor de texto.
                         </li>
                         <li>
-                            Alguns erros, como de importação, podem ser corrigidos automaticamente pelo VSCode. Para isso, basta pressionar "CTRL + ." e o VSCode irá sugerir uma correção para o erro. Caso a sugestão seja a correta, basta pressionar "Enter" para corrigir o erro.
+                            Alguns erros, como de importação, podem ser corrigidos automaticamente pelo VSCode. Para isso, basta pressionar "CTRL + ." e o VSCode irá sugerir uma
+                            correção para o erro. Caso a sugestão seja a correta, basta pressionar "Enter" para corrigir o erro.
                         </li>
-                        <li>
-                            Para navegaador para uma linha específica do código, basta pressionar "CTRL + G" e digitar o número da linha que deseja ir, então pressione "Enter".
-                        </li>
+                        <li>Para navegador para uma linha específica do código, basta pressionar "CTRL + G" e digitar o número da linha que deseja ir, então pressione "Enter".</li>
                     </ul>
 
                     <h2 id="comunidades">Comunidades para programadores cegos</h2>
@@ -245,32 +305,85 @@
 
                     <h4 id="rblind">r/Blind</h4>
                     <p>
-                        No reddit temos a comunidade r/Blind que é uma comunidade geral de pessoas cegas e que não é focada em Programação, porém nessa comunidade várias pessoas
-                        compartilham suas experiências e como conseguem vencer alguns obstáculos.
+                        No reddit temos a comunidade <a href="https://www.reddit.com/r/Blind/" target="_blank" rel="noopener noreferrer">r/Blind</a> que é uma comunidade geral de
+                        pessoas cegas e que não é focada em Programação, porém nessa comunidade várias pessoas compartilham suas experiências e como conseguem vencer alguns
+                        obstáculos.
                     </p>
                     <p>
-                        Aqui, é possível encontrar um tópico de um programador cego que fez um AMA(Ask me Anything), que é um tipo de post onde as pessoas podem fazer perguntas
+                        <a
+                            href="https://www.reddit.com/r/Blind/comments/k0zvqj/im_a_blind_programmer_developer_ama/"
+                            title="Post no reddit sobre programador cego e dicas."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Aqui</a
+                        >, é possível encontrar um tópico de um programador cego que fez um AMA(Ask me Anything), que é um tipo de post onde as pessoas podem fazer perguntas
                         relacionadas ao assunto, e é possível encontrar diversas dicas.
                     </p>
 
                     <h4 id="rprogramming">r/learnprogramming</h4>
                     <p>
-                        Ainda no reddit, temos a r/learnprogramming que é o maior fórum online para aprendizado de programação. Embora seja um fórum geral, por ser muito ativo,
-                        temos várias pessoas que fazem perguntas sobre como programar sendo deficiente visual.
+                        Ainda no reddit, temos a <a href="https://www.reddit.com/r/learnprogramming/" target="_blank" rel="noopener noreferrer">r/learnprogramming</a> que é o maior
+                        fórum online para aprendizado de programação. Embora seja um fórum geral, por ser muito ativo, temos várias pessoas que fazem perguntas sobre como programar
+                        sendo deficiente visual.
                     </p>
 
-                    <p>Aqui, temos um exemplo de post perguntando se é possível programar sendo cego, e várias respostas com dicas valiosas.</p>
-                    <p>Aqui, outro link com diversas dicas.</p>
+                    <p>
+                        <a
+                            href="https://www.reddit.com/r/learnprogramming/comments/tujc31/can_a_blind_person_learn_programming/"
+                            title="Post no reddit pedindo dicas para programar sendo cego."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Aqui</a
+                        >, temos um exemplo de post perguntando se é possível programar sendo cego, e várias respostas com dicas valiosas.
+                    </p>
+                    <p>
+                        <a
+                            href="https://www.reddit.com/r/learnprogramming/comments/gvasrk/blind_and_visually_impaired_programmers_how_do/"
+                            title="Post no reddit com dicas para programar sendo cego."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Aqui</a
+                        >, outro link com diversas dicas.
+                    </p>
                     <p>Nada impede de que você abra seu próprio tópico para fazer perguntas especializadas para seu caso.</p>
 
                     <h3 id="freecodecamp">Freecodecamp</h3>
 
                     <p>No Freecodecamp, que é uma das maiores plataformas de aprendizado de programação, é possível encontrar diversas dicas para pessoas cegas.</p>
-                    <p>Um exemplo é esse blog, que fala sobre um programador que é cego de nascença e sua experiência com programação.</p>
+                    <p>
+                        Um exemplo é esse
+                        <a
+                            href="https://www.freecodecamp.org/news/a-vision-of-coding/"
+                            title="Blog no freecodecamp com dicas para progrmar sendo cego."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >blog</a
+                        >, que fala sobre um programador que é cego de nascença e sua experiência com programação.
+                    </p>
                 </section>
             </article>
         </main>
 
-        <footer></footer>
+        <footer>
+            <p xmlns:cc="http://creativecommons.org/ns#">
+                This work is licensed under
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-block"
+                    >CC BY-NC-SA 4.0<img
+                        alt="Creative Commons License"
+                        style="height: 22px !important; margin-left: 3px; vertical-align: text-bottom"
+                        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+                        alt="Creative Commons" /><img
+                        style="height: 22px !important; margin-left: 3px; vertical-align: text-bottom"
+                        src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+                        alt="BY" /><img
+                        style="height: 22px !important; margin-left: 3px; vertical-align: text-bottom"
+                        src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+                        alt="CC" /><img
+                        style="height: 22px !important; margin-left: 3px; vertical-align: text-bottom"
+                        src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+                        alt="SA"
+                /></a>
+            </p>
+        </footer>
     </body>
 </html>
